@@ -1,0 +1,24 @@
+{
+  "name": "commitlint-config",
+  "version": "0.1.0",
+  "description": "Commitlint configuration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/positive-js/commitlint-config.git"
+  },
+  "keywords": [
+    "commitlint",
+    "git",
+    "commits"
+  ],
+  "author": "Positive Technologies",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/positive-js/commitlint-config/issues"
+  },
+  "homepage": "https://github.com/positive-js/commitlint-config#readme"
+}
