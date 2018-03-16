@@ -3,7 +3,7 @@ Commitlint configuration
 
 ## Using
 1. Install packages: 
-```
+```shell
 npm i --save-dev husky @commitlint/cli @commitlint/config-conventional @ptsecurity/commitlint-config
 ```
 2. Create file `commitlint.config.js` with extending preset and define set of scopes:
