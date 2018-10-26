@@ -3,14 +3,7 @@ module.exports = {
     rules: {
         'header-max-length': [2, 'always', 120],
         'lang': [0],
-        'subject-case': [
-            2,
-            'always',
-            [
-                'lower-case',
-                'sentence-case'
-            ]
-        ],
+        'subject-case': [0],
         'type-enum': [
             2,
             'always',
@@ -26,9 +19,6 @@ module.exports = {
                 'revert'
             ]
         ],
-        'scope-empty': [
-            0,
-            'always'
-        ]
+        'scope-empty': [0]
     }
 };
