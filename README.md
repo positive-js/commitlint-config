@@ -27,4 +27,14 @@ module.exports = {
 };
 ```
 
-Add to `package.json` in section `scripts` following line `"commitmsg": "commitlint -x=./commitlint.config.js -e $GIT_PARAMS"`, where value of argument `-x` is path to your commit configuration file
+Add to `package.json` next section:
+```json
+{
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -g ./commitlint.config.js -E HUSKY_GIT_PARAMS"
+    }  
+  }
+}
+```
+Argument `-g` is path to your commit configuration file. More details [about it](http://marionebl.github.io/commitlint/#/reference-cli)
