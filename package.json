@@ -1,6 +1,6 @@
 {
     "name": "@ptsecurity/commitlint-config",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Commitlint configuration",
     "main": "commitlint.config.js",
     "scripts": {
