@@ -32,7 +32,7 @@ Add to `package.json` next section:
 {
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -g ./commitlint.config.js -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }  
   }
 }
