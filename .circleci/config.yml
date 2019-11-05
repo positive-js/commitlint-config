@@ -1,7 +1,7 @@
 anchor_job_defaults: &job_defaults
   working_directory: ~/commitlint-config
   docker:
-    - image: ptsecurity/node-container:0.0.4
+    - image: circleci/node:10.17
 
 version: 2
 jobs:
@@ -16,8 +16,8 @@ jobs:
             echo "npm $(npm -v)"
             echo "Yarn v$(yarn --version)"
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run: npm publish --access public
-  
+      - run: yarn publish --access public
+
 workflows:
   version: 2
   default_workflow:

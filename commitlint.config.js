@@ -15,7 +15,10 @@ module.exports = {
                 'perf',
                 'bump',
                 'chore',
-                'revert'
+                'revert',
+                'build',
+                'ci',
+                'style'
             ]
         ],
         'scope-empty': [0]
