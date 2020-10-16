@@ -1,30 +1,35 @@
 anchor_job_defaults: &job_defaults
-  working_directory: ~/commitlint-config
-  docker:
-    - image: circleci/node:10.17
+    working_directory: ~/commitlint-config
+    docker:
+        -   image: circleci/node:12.19.0
+            auth:
+                username: $DOCKER_HUB_USERNAME
+                password: $DOCKER_HUB_PASSWORD
 
 version: 2
 jobs:
-  publish:
-    <<: *job_defaults
-    steps:
-      - checkout
-      - run:
-          name: System information
-          command: |
-            echo "Node.js $(node -v)"
-            echo "npm $(npm -v)"
-            echo "Yarn v$(yarn --version)"
-      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run: yarn publish --access public
+    publish:
+        <<: *job_defaults
+        steps:
+            - checkout
+            -   run:
+                    name: System information
+                    command: |
+                        echo "Node.js $(node -v)"
+                        echo "npm $(npm -v)"
+                        echo "Yarn v$(yarn --version)"
+            -   run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            -   run: yarn publish --access public
 
 workflows:
-  version: 2
-  default_workflow:
-    jobs:
-      - publish:
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /^\d+(?:\.\d+)*$/
+    version: 2
+    default_workflow:
+        jobs:
+            -   publish:
+                    context:
+                        - docker-hub
+                    filters:
+                        branches:
+                            ignore: /.*/
+                        tags:
+                            only: /^\d+(?:\.\d+)*$/
