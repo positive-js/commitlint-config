@@ -1,6 +1,6 @@
 {
     "name": "@ptsecurity/commitlint-config",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Commitlint configuration",
     "main": "commitlint.config.js",
     "scripts": {
@@ -16,9 +16,10 @@
         "url": "git+https://github.com/positive-js/commitlint-config.git"
     },
     "keywords": [
+        "husky",
+        "husky-config",
+        "commitlint-config",
         "commitlint",
-        "git",
-        "commits",
         "ptsecurity"
     ],
     "author": "Positive Technologies",
@@ -28,8 +29,8 @@
     },
     "homepage": "https://github.com/positive-js/commitlint-config#readme",
     "devDependencies": {
-        "@commitlint/cli": "^8.2.0",
-        "@commitlint/config-conventional": "^8.2.0",
-        "husky": "^3.0.9"
+        "@commitlint/cli": "^16.0.2",
+        "@commitlint/config-conventional": "^16.0.0",
+        "husky": "^7.0.4"
     }
 }
